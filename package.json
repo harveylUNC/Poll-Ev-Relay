@@ -1,0 +1,40 @@
+{
+  "name": "poll-ev-monitor",
+  "version": "1.0.0",
+  "description": "Backend relay for Twilio SMS API to be used in Poll Everywhere Monitor",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "debug": "nodemon --inspect app.js"
+  },
+  "author": "Harvey Liu",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "node-fetch": "^2.6.0",
+    "xml-js": "^1.6.11",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harveylUNC/Poll-Ev-Relay.git"
+  },
+  "keywords": [
+    "secure",
+    "api",
+    "keys"
+  ],
+  "bugs": {
+    "url": "https://github.com/harveylUNC/Poll-Ev-Relay/issues"
+  },
+  "homepage": "https://github.com/harveylUNC",
+  "devDependencies": {}
+}
