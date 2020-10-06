@@ -65,7 +65,7 @@ function sendText(newNum){
         };
     });
 
-    xhr.open("POST", `https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=12184525718&body=New%20question!&to=${newNum}`);
+    xhr.open("POST", `https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=12184525718&body=New%20%Poll%20Everywhere%20question!&to=${newNum}`);
     xhr.setRequestHeader("x-rapidapi-host", "twilio-sms.p.rapidapi.com");
     xhr.setRequestHeader("x-rapidapi-key", process.env.TWILIO_API_KEY);
     xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
