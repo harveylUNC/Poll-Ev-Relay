@@ -1,4 +1,3 @@
-// These import necessary modules and set some initial variables
 require("dotenv").config();
 const express = require("express");
 const fetch = require("node-fetch");
@@ -13,13 +12,9 @@ const limiter = rateLimit({
   max: 1, 
 });
 
-//  apply to all requests
 app.use(limiter);
 
-// Allow CORS from any origin
 app.use(cors());
-
-// Routes
 
 app.get("/api/search/", async (req, res) => {
   
