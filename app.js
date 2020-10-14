@@ -8,15 +8,9 @@ const app = express();
 const port = 5000;
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-// Rate limiting - Goodreads limits to 1/sec, so we should too
-
-// Enable if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
-// see https://expressjs.com/en/guide/behind-proxies.html
-// app.set('trust proxy', 1);
-
 const limiter = rateLimit({
   windowMs: 1000, // 1 second
-  max: 1, // limit each IP to 1 requests per windowMs
+  max: 1, 
 });
 
 //  apply to all requests
@@ -30,8 +24,7 @@ app.use(cors());
 app.get("/api/search/", async (req, res) => {
   
   try {
-    // This uses string interpolation to make our search query string
-    // it pulls the posted query param and reformats it for goodreads
+
     let pNumber = `${req.query.q}`;
 
     pNumber = req.query.q;
@@ -73,7 +66,5 @@ function sendText(newNum){
     xhr.send(data);
     return "true";
 }
-// This spins up our sever and generates logs for us to use.
-// Any console.log statements you use in node for debugging will show up in your
-// terminal, not in the browser console!
+
 app.listen(process.env.PORT || 5000, () => console.log(`Example app listening on port ${port}!`));
